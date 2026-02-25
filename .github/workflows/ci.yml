@@ -63,4 +63,6 @@ jobs:
         run: just lint
 
       - name: Lint GitHub Actions workflows
-        uses: reviewdog/action-actionlint@4b9ef3f43a0b9162e3c83c1a08d1cc8d4235164b # v1.70.0
+        run: |
+          bash <(curl -fsSL https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+          ./actionlint -color
