@@ -32,8 +32,7 @@ jobs:
         uses: biomejs/setup-biome@1cbe33ead22c7a2fded3b52fa2893611c815c9b5 # v2.5.0
 
       - name: Install just
-        run: |
-          curl -fsSL https://just.systems/install.sh | bash -s -- --to /usr/local/bin
+        run: uv tool install rust-just
 
       - name: Install rumdl
         run: |
