@@ -29,9 +29,8 @@ jobs:
         uses: astral-sh/setup-uv@803947b9bd8e9f986429fa0c5a41c367cd732b41 # v7.2.1
 
       - name: Install Biome
-        uses: biomejs/setup-biome@1cbe33ead22c7a2fded3b52fa2893611c815c9b5 # v2.5.0
-        with:
-          version: 2.3.2
+        run: |
+          npm install -g @biomejs/biome@2.3.2
 
       - name: Install just
         run: uv tool install rust-just
